@@ -1,0 +1,39 @@
+version: '3'
+services:
+
+    front-end:
+      image: nginx:latest
+      ports:
+        - "8080:80"
+      volumes:
+        - ./app:/var/www/html
+      depends_on:
+        - php
+      networks:
+        - mynetwork
+
+    php:
+      image: php:apache
+      volumes:
+        - /Users/gorniyzhitel/253503_belyan_3/igi/LR1/geometric_lib/docker-compose.yml./app/var/www/html
+      networks:
+        - mynetwork
+    back-end:
+      image: mysql:latest
+      environment:
+        MYSQL_ROOT_PASSWORD: example
+        MYSQL_DATABASE: myapp
+        MYSQL_USER: appuser
+        MYSQL_PASSWORD: password
+      volumes:
+          - mysql_data:/var/lib/mysql
+      networks:
+        - mynetwork
+    phpmyadmin:
+      image: phpmyadmin/phpmyadmin:latest
+      ports:
+        - "8081:80"
+      environment:
+        PMA_HOST: mysql
+      networks:
+        - mynetwork
