@@ -1,0 +1,17 @@
+Number of offers: 5
+Number of narrative sentences: 3
+Number of interrogative sentences: 1
+Number of incentive offers: 1
+Average sentence length: 73.71428571428571
+Average word length: 5.9324324324324325
+Word count: 74        nNumber of words with an odd number of letters: 29
+The shortest word starting with a letter "i": in
+Repeated words: ['The', 'of', 'our', 'of', 'of', 'of', 'higher', 'directions', 'of', 'directions', 'of', 'the', 'administrative', 'of', 'the', 'order', 'represents', 'the', 'higher', 'of', 'the', 'sphere', 'the', 'order', 'conditions', 'The', 'sphere', 'of', 'represents', 'our', 'the', 'of', 'the', 'administrative', 'sphere', 'the', 'of', 'conditions']
+Email list: ['sasd@gmail.com']
+List of names: ['Tom Smith']
+Replaced text: The constant progressive task of our forms of particular development!
+Features of organizational verification of higher directions of directions by participants
+of the new administrative significance of the order, represents the higher model of the same
+sphere also in the existing order, conditions. The sphere of quantitative personnel plays
+represents our role, the prevailing considerations of training and the set administrative sphere
+allows the formation of conditions? Casual positions. Tom Smith - sasd@gmail.com.
