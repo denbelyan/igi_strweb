@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Service List</h1>
+  <ul>
+    {% for service in services %}
+      <li><a href="{% url 'service_detail' service.id %}">{{ service.client.first_name }} {{ service.client.last_name }}  - {{ service.service_name }} </a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}

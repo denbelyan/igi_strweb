@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+        <h1>Service Detail</h1>
+  <h2>Service ID: {{ service.id }}</h2>
+  <p>Service name: {{ service.service_name }}</p>
+  <p>Client: {{ service.client }}</p>
+  <p>Phone: {{ "+375 29 XX XXX XX"}}</p>
+  <p>service start Date: {{ service.service_start_date }}</p>
+  <p>service end Date: {{ service.service_end_date }}</p>
+    {% else %}
+    {% endif %}
+{% endblock %}

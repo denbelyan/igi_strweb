@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Update Card</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            <label for="id_name">Name:</label>
+            <input type="text" name="name" id="id_name" value="{{ card.name }}">
+        </div>
+        <div>
+            <label for="id_halls">Halls:</label>
+            <select name="halls" id="id_halls" multiple>
+                {% for hall in halls %}
+                    <option value="{{ hall.id }}" {% if hall in card.halls.all %}selected{% endif %}>{{ hall.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label for="id_price">Price:</label>
+            <input type="text" name="price" id="id_price" value="{{ card.price }}">
+        </div>
+        <div>
+            <label for="id_start_work">Starts:</label>
+            <input type="text" name="start_work" id="id_start_work" value="{{ card.start_work }}">
+        </div>
+        <div>
+            <label for="id_end_work">Ends:</label>
+            <input type="text" name="end_work" id="id_end_work" value="{{ card.end_work }}">
+        </div>
+        <button type="submit">Update</button>
+    </form>
+{% endblock %}

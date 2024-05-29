@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form>
+    <h1>Feedbacks</h1>
+     <ul>
+        {% for feedback in feedbacks %}
+        <li><a href="{% url 'feedback_add' feedback.id %}">{{ feedback.text }}</a></li>
+        {% endfor %}
+    </ul>
+    <ul>
+
+        <li>Rating: 1 star - dislike - Author: Ivanov Ivan from 20.05.2024 20:00</li>
+        <li>Rating: 5 star - like - Author: Petrov Petr from 21.05.2024 17:30</li>
+        <li>Rating: 3 star - some feedback - Author: Some author from 22.05.2024 15:00</li>
+        <li>Rating: 4 star - some text - Author: anonim from 23.05.2024 19:00</li>
+        <li>Rating: 5 star - kruto - Author: qwerty12345 from 24.05.2024 17:00</li>
+    </ul>
+
+</form>
+{% endblock %}
