@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form>
+    <h1>Halls</h1>
+    <ul>
+        {% for hall in halls %}
+            <li>{{ hall.name }} - Price per 1 hour: {{ hall.price_per_night }} - {{ hall.schedule.start_work }} - {{ hall.schedule.end_work }}</li>
+        {% endfor %}
+    </ul>
+</form>
+    {% if user.is_authenticated %}
+        <a href="{% url 'halls_add' %}">Add Hall</a>
+    {% else %}
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>
+        Timezone data
+    </h1>
+    <p> User timezone: {{ user_timezone }}</p>
+    <p> User Time: {{ current_date_formated }}</p>
+    <pre>Calendar: {{ calendar_text }}</pre>
+    <p>UTC: {{ utc_time }}</p>
+
+
+{% endblock %}

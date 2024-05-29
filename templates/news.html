@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>News</h1>
+    <form method="post" enctype="multipart/form-data">
+        <img src = "https://w7.pngwing.com/pngs/561/866/png-transparent-nile-crocodile-american-alligator-nice-crocodile-animals-fauna-terrestrial-animal-thumbnail.png"  >
+    </form>
+    {% if user.is_authenticated %}
+        <a href="{% url 'news_read' %}">В американском штате Флорида полицейские поймали возле одного из жилых домов трехметрового аллигатора</a>
+    {% else %}
+    {% endif %}
+{% endblock %}
